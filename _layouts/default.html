@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>soup</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <img src="/assets/images/bgd_2400_1600.jpg" style="display:none;" alt="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;1,300;1,400&family=Spectral+SC&family=Spline+Sans+Mono:wght@300&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <nav>
+      <span id="nav-title"><a href="/">soup</a></li></span>
+      {% for item in site.data.navlist.docs %}
+      <a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+      <a href="/assets/files/resume.pdf">Resume</a></li>
+    </nav>
+    <section>
+        {{ content }}
+    </section>
+  </body>
+</html>
