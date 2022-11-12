@@ -17,8 +17,18 @@
       {% endfor %}
       <a href="/assets/files/resume.pdf">Resume</a></li>
     </nav>
-    <section>
+    <div class="post-container">
+      <section>
         {{ content }}
     </section>
+    </div>
+    <footer>
+      <a href="{{ site.data.socials.instagram}}">
+        <img src="/assets/images/IG.png" />
+      </a>
+      <a href="{{ site.data.socials.twitter }}">
+        <img src="/assets/images/Twitter.png" />
+      </a>
+    </footer>
   </body>
 </html>

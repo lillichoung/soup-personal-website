@@ -13,6 +13,12 @@ body {
   margin: 0;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  padding-left: 48px;
+}
+
 nav {
   // background: linear-gradient(127deg, #0c0c0c, transparent 90%);
   padding: 48px;
@@ -69,7 +75,14 @@ h2 {
   font-family: 'Spline Sans Mono';
 }
 
-.post {
+h3 {
+  color: #F5F1E9;
+  font-family: 'Source Serif Pro';
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.post-container {
   position: relative;
   display: flex;
   flex-direction: column;
