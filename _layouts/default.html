@@ -7,16 +7,25 @@
     <img src="/assets/images/bgd_2400_1600.jpg" style="display:none;" alt="" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;1,300;1,400&family=Spectral+SC&family=Spline+Sans+Mono:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;1,300;1,400&family=Spectral+SC&family=Spline+Sans+Mono:wght@300&display=swap" rel="stylesheet">
+    <script src="/assets/js/menu.js"></script>
   </head>
   <body>
     <nav>
+      <span id="nav-hamburger-menu" onclick="toggleMenuVisibility()"><img src="/assets/images/Menu.svg" /></span>
       <span id="nav-title"><a href="/">soup</a></li></span>
       {% for item in site.data.navlist.docs %}
       <a href="{{ item.url }}">{{ item.title }}</a></li>
       {% endfor %}
       <a href="/assets/files/resume.pdf">Resume</a></li>
     </nav>
+    <div id="hamburger-nav">
+      <h3>Navigation</h3>
+      {% for item in site.data.navlist.docs %}
+      <a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+      <a href="/assets/files/resume.pdf">Resume</a></li>
+    </div>
     <div class="post-container">
       <section>
         {{ content }}

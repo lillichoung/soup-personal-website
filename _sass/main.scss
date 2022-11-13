@@ -1,5 +1,6 @@
 body {
   height: 100vh;
+  min-width: 450px;
   background: #131313 url(/assets/images/bgd_2400_1600.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -42,6 +43,51 @@ nav {
     font-style: italic;
     color: #CDC9C0;
     font-size: 2em;
+  }
+}
+
+@media (max-width: 450px) {
+  nav {
+    a {
+      visibility: hidden;
+    }
+  }
+  #nav-hamburger-menu {
+    visibility: visible;
+  }
+  #nav-title {
+    a {
+      visibility: visible;
+    }
+  }
+}
+
+#hamburger-nav {
+  display: none;
+  z-index: 9999;
+
+  height: 100vh;
+  width: 380px;
+  background-color: #131313;
+  flex-direction: column;
+  padding: 48px;
+  padding-top: 96px;
+
+  a {
+    font-family: 'Source Serif Pro';
+    font-weight: 400;
+    font-style: italic;
+    color: #CDC9C0;
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 451px) {
+  #nav-hamburger-menu {
+    visibility: hidden;
+  }
+  #hamburger-nav {
+    display: none;
   }
 }
 
@@ -88,11 +134,19 @@ h3 {
   flex-direction: column;
   margin: auto;
   overflow-y: auto;
-  top: 15vh;
   max-width: 550px;
+  top: 20vh;
   height: 65vh;
   padding: 64px;
   background: 
     linear-gradient(217deg, #131313, transparent 90%),
     linear-gradient(127deg, #131313, transparent 90%)
+}
+
+.show {display:flex;}
+
+@media (max-width: 450px) {
+  .post-container {
+    top: 15vh;
+  }
 }
