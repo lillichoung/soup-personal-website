@@ -1,3 +1,6 @@
+$max-small-screen-width: 500px;
+$min-large-screen-width: 501px;
+
 body {
   height: 100vh;
   min-width: 450px;
@@ -26,6 +29,7 @@ nav {
   width: 100vw;
   height: 25px;
   position: fixed;
+  white-space: nowrap;
   top: 0;
 
   a {
@@ -46,7 +50,7 @@ nav {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: $max-small-screen-width) {
   nav {
     a {
       visibility: hidden;
@@ -82,7 +86,7 @@ nav {
   }
 }
 
-@media (min-width: 451px) {
+@media (min-width: $min-large-screen-width) {
   #nav-hamburger-menu {
     visibility: hidden;
   }
@@ -145,7 +149,7 @@ h3 {
 
 .show {display:flex;}
 
-@media (max-width: 450px) {
+@media (max-width: $max-small-screen-width) {
   .post-container {
     top: 15vh;
   }
